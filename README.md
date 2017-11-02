@@ -3,7 +3,7 @@
 
 Neu: interaktives und statisches Menü
 
-# Was noch gemacht werden muss: ButtonManagForInteractiv Script beim Buttonmanager überarbeiten bzw. Methode füllen.
+# Was noch gemacht werden muss im interactivMenu: ButtonManagForInteractiv Script beim Buttonmanager überarbeiten bzw. Methode füllen.
 
 weitere Informationen zum interaktivem Menü:
 
