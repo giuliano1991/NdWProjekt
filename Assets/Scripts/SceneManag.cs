@@ -10,12 +10,8 @@ public class SceneManag : MonoBehaviour {
 	private void Awake () {
 
 		Instance = this;
-		Load("Player");
-		Load("Task_1");
-		Load("Connecter_1");
-		Load("Task_2");
-		Load("Connecter_2");
-		Unload ("Menu");
+		Load ("Menu");
+		MenuFollowerActive.Instance.DeactiveMenuFollower ();
 
 	}
 
@@ -30,6 +26,9 @@ public class SceneManag : MonoBehaviour {
 
 		if (SceneManager.GetSceneByName (sceneName).isLoaded)
 			SceneManager.UnloadSceneAsync (sceneName);
+
+		if (sceneName == "Menu")
+			MenuFollowerActive.Instance.ActiveMenuFollower ();
 
 	}
 

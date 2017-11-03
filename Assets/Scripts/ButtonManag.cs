@@ -5,11 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManag : MonoBehaviour {
 
-	public string unloadOutro;
-
 	public void NewGame(string newGameLevel) {
 
-		SceneManager.LoadScene (newGameLevel);
+		//SceneManag.Instance.Load ("interactiveMenu");
+		SceneManag.Instance.Load ("Task_1");
+		SceneManag.Instance.Load ("Connecter_1");
+		SceneManag.Instance.Load ("Task_2");
+		SceneManag.Instance.Load ("Connecter_2");
+
+		StartCoroutine(UnloadScene ("Menu"));
 
 	}
 
@@ -18,16 +22,7 @@ public class ButtonManag : MonoBehaviour {
 		Application.Quit ();
 
 	}
-
-	void Start () {
-	
-		if (unloadOutro != "") {
-
-			StartCoroutine (UnloadScene (unloadOutro));
-
-		}
-
-	}
+		
 
 	IEnumerator UnloadScene(string unload) {
 		yield return new WaitForSeconds (0.1f);

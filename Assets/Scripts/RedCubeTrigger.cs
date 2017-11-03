@@ -22,10 +22,13 @@ public class RedCubeTrigger : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other) {
 
-		objectTrigger = other.gameObject;
-		_RedCube.TriggerFunction (objectTrigger);
-		t_Collider.enabled = false;
+		if (other.gameObject.name == "Sphere") {
 
+			objectTrigger = other.gameObject;
+			_RedCube.TriggerFunction (objectTrigger);
+			t_Collider.enabled = false;
+
+		}
 	}
 
 	public void ActiveTrigger () {

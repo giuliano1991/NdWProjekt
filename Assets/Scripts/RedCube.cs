@@ -86,7 +86,7 @@ public class RedCube : MonoBehaviour {
     {
 
         // Wird geprüft ob der maximale Ziehwert ungleich Null ist
-		if (maxPull != 0 & _cubeLocation.isBusy != true)
+		if (maxPull != 0 && _cubeLocation.isBusy != true)
         {
 
 			gotPull = true;
@@ -130,7 +130,7 @@ public class RedCube : MonoBehaviour {
 
         }
 
-		else if (maxPull == 0 & _cubeLocation.isBusy != true) {
+		else if (maxPull == 0 && _cubeLocation.isBusy != true) {
 
 		PlaySoundFX (2);
 
@@ -146,7 +146,7 @@ public class RedCube : MonoBehaviour {
     {
 
         // Wird geprüft ob der maximale Drückwert ungleich Null ist
-		if (maxPush != 0 & _cubeLocation.isBusy != true) {
+		if (maxPush != 0 && _cubeLocation.isBusy != true) {
 
 			// Switchabfrage für die Position des Cubes + die korrekte Berechnung der neuen Position
 			switch (_cubeLocation.location) {
@@ -184,7 +184,7 @@ public class RedCube : MonoBehaviour {
 			++maxPull;
 			--maxPush;
 
-		} else if (maxPush == 0 & _cubeLocation.isBusy != true){
+		} else if (maxPush == 0 && _cubeLocation.isBusy != true){
 		
 			PlaySoundFX (2);
 

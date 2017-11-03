@@ -1076,6 +1076,11 @@ Prefab:
       propertyPath: jumpForce
       value: 9.4
       objectReference: {fileID: 0}
+    - target: {fileID: 82790304198763400, guid: a892b055fd5994f4a833fc403c3567a7,
+        type: 2}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a892b055fd5994f4a833fc403c3567a7, type: 2}
   m_IsPrefabParent: 0
@@ -2439,6 +2444,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114763265615802072, guid: 0c8e0c0d2d81f9447b8783fa01c21465,
+        type: 2}
+      propertyPath: LightList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4623981555199370, guid: 0c8e0c0d2d81f9447b8783fa01c21465, type: 2}
       propertyPath: m_LocalPosition.x
       value: -23.75
@@ -2493,9 +2503,52 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 82723050433542206, guid: 0c8e0c0d2d81f9447b8783fa01c21465,
+        type: 2}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114763265615802072, guid: 0c8e0c0d2d81f9447b8783fa01c21465,
+        type: 2}
+      propertyPath: LightList.Array.data[0]
+      value: 
+      objectReference: {fileID: 488516484}
+    - target: {fileID: 114763265615802072, guid: 0c8e0c0d2d81f9447b8783fa01c21465,
+        type: 2}
+      propertyPath: LightList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1422371730}
+    - target: {fileID: 114763265615802072, guid: 0c8e0c0d2d81f9447b8783fa01c21465,
+        type: 2}
+      propertyPath: LightList.Array.data[2]
+      value: 
+      objectReference: {fileID: 526537758}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c8e0c0d2d81f9447b8783fa01c21465, type: 2}
   m_IsPrefabParent: 0
+--- !u!108 &488516484 stripped
+Light:
+  m_PrefabParentObject: {fileID: 108873040771892794, guid: 0c8e0c0d2d81f9447b8783fa01c21465,
+    type: 2}
+  m_PrefabInternal: {fileID: 488516483}
+--- !u!1 &488516485 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1398438017632488, guid: 0c8e0c0d2d81f9447b8783fa01c21465,
+    type: 2}
+  m_PrefabInternal: {fileID: 488516483}
+--- !u!114 &488516486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 488516485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5105465bc77a23d4299d20dc7b32930c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 3
+  intenEnd: 0
 --- !u!1001 &488638558
 Prefab:
   m_ObjectHideFlags: 0
@@ -2757,6 +2810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 526537757}
   - component: {fileID: 526537758}
+  - component: {fileID: 526537759}
   m_Layer: 0
   m_Name: End Light
   m_TagString: Untagged
@@ -2813,6 +2867,19 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &526537759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 526537756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5105465bc77a23d4299d20dc7b32930c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 3
+  intenEnd: 0
 --- !u!1001 &534710218
 Prefab:
   m_ObjectHideFlags: 0
@@ -8044,6 +8111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1422371729}
   - component: {fileID: 1422371730}
+  - component: {fileID: 1422371731}
   m_Layer: 0
   m_Name: Sphere Light
   m_TagString: Untagged
@@ -8100,6 +8168,19 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1422371731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1422371728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5105465bc77a23d4299d20dc7b32930c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 3
+  intenEnd: 0
 --- !u!1001 &1426389293
 Prefab:
   m_ObjectHideFlags: 0

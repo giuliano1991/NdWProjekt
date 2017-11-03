@@ -79,7 +79,7 @@ public class BlueCube : MonoBehaviour {
 	public void BlueCubeTrigger () {
 
 		// Wird geprüft ob der Cube oben ist sprich schon einmal aktiviert wurde
-		if (upCube != false & _cubeLocation.isBusy != true) {
+		if (upCube != false && _cubeLocation.isBusy != true) {
 
 			// Switchabfrage für die Position des Cubes + die korrekte Berechnung der neuen Position
 			switch (_cubeLocation.location) {
@@ -120,6 +120,9 @@ public class BlueCube : MonoBehaviour {
 			PlaySoundFX (2);
 		
 		}
+
+		upCube = false;
+
 	}
 	
 //-------------------------------------------------------
@@ -139,7 +142,7 @@ public class BlueCube : MonoBehaviour {
 	void OnCollisionEnter (Collision col) {
 			
 		// Wird geprüft ob der Cube oben ist sprich schon einmal aktiviert wurde
-		if (upCube != true) {
+		if (upCube != true && _cubeLocation.isBusy != true) {
 
 			// Switchabfrage für die Position des Cubes + die korrekte Berechnung der neuen Position
 			switch (_cubeLocation.location)
@@ -216,12 +219,6 @@ public class BlueCube : MonoBehaviour {
 			timeSinceStarted += Time.deltaTime * speed;
 			transform.position = Vector3.Lerp(startPos, endPos, timeSinceStarted);
 			yield return null;
-
-		}
-
-		if (upCube == true) {
-
-			upCube = false;
 
 		}
 

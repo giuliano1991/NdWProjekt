@@ -5,9 +5,9 @@ using UnityEngine;
 public class SphereMovement : MonoBehaviour
 {
 
-    public float value = 0;
-    public GameObject prefab;
-	bool TriggerFirstUsed = true;
+	public Vector3 velocityVector;
+	public bool triggerOnlyOnce;
+	private bool useTrigger = true;
 
     // Use this for initialization
     void Start()
@@ -21,34 +21,27 @@ public class SphereMovement : MonoBehaviour
 
     }
 
-   /* void OnCollisionEnter (Collision col)
-	{
-
-		prefab.GetComponent<Rigidbody> ().angularDrag = value;
-
-	}*/
-
     void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.name == "Sphere")
-        {
-			TriggerFunktion ();
-        }
+		if (other.gameObject.name == "Sphere" && useTrigger == true) {
+
+			other.GetComponent<Rigidbody> ().velocity = new Vector3(0,0,0);
+			other.GetComponent<Rigidbody> ().velocity = velocityVector;
+
+			if (triggerOnlyOnce == true) {
+
+				useTrigger = false;
+		
+			}
+		}
 
     }
 
-	void TriggerFunktion() {
+	public void ResetTrigger () {
+	
+		useTrigger = true;
 
-		if (TriggerFirstUsed == true) {
-		//prefab.GetComponent<Rigidbody>().angularDrag = value;
-		TriggerFirstUsed = false;
-		prefab.GetComponent<Rigidbody> ().velocity = Vector3.zero;
-		}
 	}
-
-	public void TriggerReset() {
-
-		TriggerFirstUsed = true;
-	}
+		
 }

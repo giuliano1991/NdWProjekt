@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class FadeManag : MonoBehaviour {
 
+	public static FadeManag Instance { set; get;}
+
 	public Image fadeImage;
+	public GameObject fadeObject;
 	public float duration;
 	public Color secondColor;
 	public bool fadeIn;
@@ -14,6 +17,7 @@ public class FadeManag : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		Instance = this;
 		firstColor = fadeImage.GetComponent<Image> ().color;
 		
 	}
@@ -30,9 +34,9 @@ public class FadeManag : MonoBehaviour {
 	}
 
 	IEnumerator FadeTransition () {
-	
+
 		float transition = 0f;
-		fadeImage.enabled = true;
+		fadeObject.SetActive (true);
 
 		while (transition <= 1f) {
 		

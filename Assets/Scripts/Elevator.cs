@@ -10,6 +10,7 @@ public class Elevator : MonoBehaviour {
 	private Vector3 leftToRight;
 	private float distance = 0.5f;
 	private bool ButtonUsed = false;
+	public TriggerPlayer _TriggerPlayer;
 
 	// Variablen für den Aufzug Animation
 	public GameObject ElevatorShaft;
@@ -20,7 +21,6 @@ public class Elevator : MonoBehaviour {
 
 	//Variablen für den Absturz Animation
 	private Vector3 BlackOut;
-	public FadeManag _FadeManag;
 
 	//Light
 	public LightManag _LightBtn;
@@ -66,7 +66,7 @@ public class Elevator : MonoBehaviour {
 
 	public void ButtonPress () {
 
-		if (ButtonUsed != true) {
+		if (ButtonUsed != true && _TriggerPlayer.isFacing != false ) {
 		sourceFX.Play ();
 		StartCoroutine (AnimateButton());
 		}
@@ -197,8 +197,8 @@ public class Elevator : MonoBehaviour {
 			}
 
 			if (timeSinceStarted >= 8.3f && startFade == false) {
-			
-				_FadeManag.Fade ();
+
+				FadeManag.Instance.Fade ();
 				startFade = true;
 			
 			}

@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndCredit : MonoBehaviour {
 
-	public string loadName;
 	public string unloadName;
 	public string unloadConnecter;
 
@@ -47,9 +47,9 @@ public class EndCredit : MonoBehaviour {
 
 		yield return new WaitForSeconds (8f);
 
-		if (loadName != "") {
-			SceneManag.Instance.Load (loadName);
-		}
+		StartCoroutine (UnloadScene("GameScene"));
+
+		SceneManager.LoadScene("GameScene");
 
 	}
 
