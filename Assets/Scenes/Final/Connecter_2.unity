@@ -2201,7 +2201,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1211725707532714, guid: eee6cc89ba1b2cd4a85879594e5f3f43, type: 2}
       propertyPath: m_Name
-      value: Wall
+      value: NoTeleport
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eee6cc89ba1b2cd4a85879594e5f3f43, type: 2}

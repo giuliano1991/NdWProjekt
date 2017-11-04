@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Final/Menu.unity
     guid: 9d5e1bc4b2c9ddf4f9fdd94bfb35e830
   - enabled: 1
+    path: Assets/Scenes/Final/Player.unity
+    guid: 00000000000000000000000000000000
+  - enabled: 1
     path: Assets/Scenes/Final/Task_1.unity
     guid: c18120c9397dcb243a60482544ff10a8
   - enabled: 1
@@ -38,6 +41,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final/Elevator.unity
     guid: 8b0635b47275d104890e18d8d60dec6d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Final/EndCredit.unity
     guid: 447d3c670fd25f942891f3f147460715

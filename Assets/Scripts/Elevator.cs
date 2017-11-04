@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Elevator : MonoBehaviour {
 
@@ -18,6 +19,7 @@ public class Elevator : MonoBehaviour {
 	private Vector3 elevatorStartPos;
 	private Vector3 elevatorStopPos;
 	public AudioSource ElevatorMusic;
+	public GameObject noEscapeBox;
 
 	//Variablen für den Absturz Animation
 	private Vector3 BlackOut;
@@ -44,7 +46,6 @@ public class Elevator : MonoBehaviour {
 
 	// Variablen für die Tür Animation
 	public Door _DoorClos;
-	public string loadOutro;
 	public string unloadName;
 	public string unloadConnecter;
 
@@ -66,9 +67,11 @@ public class Elevator : MonoBehaviour {
 
 	public void ButtonPress () {
 
-		if (ButtonUsed != true && _TriggerPlayer.isFacing != false ) {
+		if (ButtonUsed != true /*&& _TriggerPlayer.isFacing != false*/ ) {
 		sourceFX.Play ();
 		StartCoroutine (AnimateButton());
+		noEscapeBox.SetActive (true);
+
 		}
 	}
 
@@ -154,6 +157,7 @@ public class Elevator : MonoBehaviour {
 		// Timer wird auf Null gesetzt und die Startposition und Endposition des Cubes wird ermittelt
 		float timeSinceStarted = 0f;
 		float ElevatorSpeed = 0f;
+		noEscapeBox.SetActive (false);
 		_elevatorSounds.ElevatorMoving ();
 		yield return new WaitForSeconds (0.6f);
 		ElevatorMusic.Play ();
@@ -216,11 +220,13 @@ public class Elevator : MonoBehaviour {
 			ElevatorShaft.transform.position = Vector3.MoveTowards(elevatorStartPos, BlackOut, ElevatorSpeed);
 			yield return null;
 		}
-		_elevatorSounds.ElevatorChrashing();
-		yield return new WaitForSeconds (4f);
-		if (loadOutro != "") {
-			SceneManag.Instance.Load (loadOutro);
-		}
+		//_elevatorSounds.ElevatorChrashing();
 
-	}
+		yield return new WaitForSeconds (8f);
+
+        StartCoroutine(UnloadScene("GameScene"));
+
+        SceneManager.LoadScene("GameScene");
+
+    }
 }

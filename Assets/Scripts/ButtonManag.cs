@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManag : MonoBehaviour {
 
-	public void NewGame(string newGameLevel) {
+	public void NewGame() {
 
 		//SceneManag.Instance.Load ("interactiveMenu");
 		SceneManag.Instance.Load ("Task_1");

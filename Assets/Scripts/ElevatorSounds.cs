@@ -34,18 +34,18 @@ public class ElevatorSounds : MonoBehaviour {
 
 	public void ElevatorFalling() {
 
-		ElevatorsourceFX.loop = true;
+		//ElevatorsourceFX.loop = true;
 		PlaySoundFX (2);
 	
 	}
 
-	public void ElevatorChrashing() {
+	//public void ElevatorChrashing() {
 
-		ElevatorsourceFX.loop = false;
-		StopSoundFX (2);
-		PlaySoundFX (3);
+	//	ElevatorsourceFX.loop = false;
+	//	StopSoundFX (2);
+	//	PlaySoundFX (3);
 	
-	}
+	//}
 
 	void PlaySoundFX (int clip) {
 

@@ -23,15 +23,15 @@ public class MenuFollowerActive : MonoBehaviour {
 
 	public void ActiveMenuFollower() {
 
-		leftController.GetComponent<MenuToggle>().enabled = true;
-		rightController.GetComponent<MenuToggle>().enabled = true;
+		//leftController.GetComponent<>
+		//rightController.GetComponent<VRTK_ControllerEvents_UnityEvents>().enabled = true;
 
 	}
 
 	public void DeactiveMenuFollower() {
 
-		leftController.GetComponent<MenuToggle>().enabled = false;
-		rightController.GetComponent<MenuToggle>().enabled = false;
+		//leftController.GetComponent<VRTK_ControllerEvents_UnityEvents>().enabled = false;
+		//rightController.GetComponent<VRTK_ControllerEvents_UnityEvents>().enabled = false;
 
 	}
 

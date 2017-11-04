@@ -1,23 +1,40 @@
 -Level überarbeiten mit den neuen Prefabs:
+
 	- Menü		(fertig)
+
 	- Task1		(fertig)
+
 	- Connecter1	(fertig)
+
 	- Task2		(fertig)
+
 	- Connecter2	(fertig)
+
 	- Task3
+
 	- Connecter3	(fertig)
+
 	- Task4
-	- Connecter4
+
+	- Connecter4	(fertig)
 	- Elevator	(fertig)
-	- End Credits	(fertig)
+
+
 
 - Trigger Area austesten für Player (fertig)
+
 - Sounds besser abmischen (fertig)
+
 - Scripts verbessern (fertig)
 
 
 
+
+
 - Optional - Musik hinzufügen
+
 - Optional - Elevator Script kürzen
+
 - Optional - Animation Script anfertigen
+
 - Optional - Ein weiteres Level
