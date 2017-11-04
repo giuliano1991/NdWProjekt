@@ -11,9 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final/Menu.unity
     guid: 9d5e1bc4b2c9ddf4f9fdd94bfb35e830
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Final/Player.unity
-    guid: 00000000000000000000000000000000
+    guid: 254d06b10dfbe9e4d9afc229d48084c8
   - enabled: 1
     path: Assets/Scenes/Final/Task_1.unity
     guid: c18120c9397dcb243a60482544ff10a8

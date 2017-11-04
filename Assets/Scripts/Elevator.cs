@@ -67,7 +67,7 @@ public class Elevator : MonoBehaviour {
 
 	public void ButtonPress () {
 
-		if (ButtonUsed != true /*&& _TriggerPlayer.isFacing != false*/ ) {
+		if (ButtonUsed != true && _TriggerPlayer.isFacing != false ) {
 		sourceFX.Play ();
 		StartCoroutine (AnimateButton());
 		noEscapeBox.SetActive (true);
@@ -222,7 +222,7 @@ public class Elevator : MonoBehaviour {
 		}
 		//_elevatorSounds.ElevatorChrashing();
 
-		yield return new WaitForSeconds (8f);
+		yield return new WaitForSeconds (10f);
 
         StartCoroutine(UnloadScene("GameScene"));
 
